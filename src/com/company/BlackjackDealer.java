@@ -24,6 +24,7 @@ public class BlackjackDealer {
             System.out.println("Total: " + total);
 
             do {
+
                 do {
                     System.out.print("Hit? (y/n): ");
                     anotherCard = input.next().charAt(0);
@@ -46,10 +47,13 @@ public class BlackjackDealer {
                 } else if (total == 21) {
                     System.out.println("Blackjack!");
                 }
+
             } while ((total < 21) && (anotherCard != 'n'));
 
             if (total <= 21) {
                 System.out.println("Dealer has a " + dealer + "...");
+                input.nextLine();
+
                 do {
                     System.out.print("(c to continue) ");
                     input.nextLine();
@@ -66,6 +70,7 @@ public class BlackjackDealer {
                 } else {
                     System.out.println("Push!");
                 }
+
             }
 
             do {
@@ -75,6 +80,7 @@ public class BlackjackDealer {
                 if (!(playAgain == 'y' || playAgain == 'n')) {
                     System.out.println("Error: invalid input.");
                 }
+
             } while (!(playAgain == 'y' || playAgain == 'n'));
 
         } while (playAgain == 'y');

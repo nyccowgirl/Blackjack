@@ -22,6 +22,7 @@ public class Blackjack {
             System.out.println("Total: " + total);
 
             do {
+
                 do {
                     System.out.print("Do you want another card? (y/n): ");
                     anotherCard = input.next().charAt(0);
@@ -44,6 +45,7 @@ public class Blackjack {
                 } else if (total == 21) {
                     System.out.println("Blackjack!");
                 }
+
             } while ((total < 21) && (anotherCard != 'n'));
 
             do {
@@ -53,6 +55,7 @@ public class Blackjack {
                 if (!(playAgain == 'y' || playAgain == 'n')) {
                     System.out.println("Error: invalid input.");
                 }
+
             } while (!(playAgain == 'y' || playAgain == 'n'));
 
         } while (playAgain == 'y');
