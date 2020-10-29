@@ -7,7 +7,7 @@ public class Blackjack {
 
     public static void main(String[] args) {
         int card, total;
-        char playAgain, anotherCard = 'y';
+        char playAgain, anotherCard;
         Scanner input = new Scanner(System.in);
         Random random = new Random();
 
@@ -20,10 +20,18 @@ public class Blackjack {
             total += card;
             System.out.println(card);
             System.out.println("Total: " + total);
+            anotherCard = 'y';
 
             while ((total < 21) && (anotherCard != 'n')) {
-                System.out.print("Do you want another card? (y/n): ");
-                anotherCard = input.next().charAt(0);
+                do {
+                    System.out.print("Do you want another card? (y/n): ");
+                    anotherCard = input.next().charAt(0);
+
+                    if (!(anotherCard == 'y' || anotherCard == 'n')) {
+                        System.out.println("Error: invalid input.");
+                    }
+
+                } while (!(anotherCard == 'y' || anotherCard == 'n'));
 
                 if (anotherCard == 'y') {
                     card = random.nextInt(10) + 1;
@@ -39,8 +47,14 @@ public class Blackjack {
                 }
             }
 
-            System.out.print("Do you want to play again? (y/n): ");
-            playAgain = input.next().charAt(0);
+            do {
+                System.out.print("Do you want to play again? (y/n): ");
+                playAgain = input.next().charAt(0);
+
+                if (!(playAgain == 'y' || playAgain == 'n')) {
+                    System.out.println("Error: invalid input.");
+                }
+            } while (!(playAgain == 'y' || playAgain == 'n'));
 
         } while (playAgain == 'y');
     }
