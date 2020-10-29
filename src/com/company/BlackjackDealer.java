@@ -59,7 +59,7 @@ public class BlackjackDealer {
                     System.out.println("Total: " + dealer);
                 } while (dealer < 17);
 
-                if (dealer > total && dealer < 21) {
+                if (dealer > total && dealer <= 21) {
                     System.out.println("Dealer Wins!");
                 } else if (dealer < total || dealer > 21) {
                     System.out.println("You Win!");
