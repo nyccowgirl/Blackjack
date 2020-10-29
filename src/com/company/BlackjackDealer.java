@@ -1,21 +1,23 @@
 package com.company;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
-public class Blackjack {
-
+public class BlackjackDealer {
     public static void main(String[] args) {
-        int card, total;
+        int card, total, dealer;
         char playAgain, anotherCard;
         Scanner input = new Scanner(System.in);
         Random random = new Random();
 
         do {
-            total = 0;
+            total = dealer = 0;
+            card = random.nextInt(10) + 1;
+            dealer += card;
+            System.out.println("The dealer starts with a " + card);
             card = random.nextInt(10) + 1;
             total += card;
-            System.out.print("First cards: " + card + ", ");
+            System.out.print("Your first cards: " + card + ", ");
             card = random.nextInt(10) + 1;
             total += card;
             System.out.println(card);
@@ -23,7 +25,7 @@ public class Blackjack {
 
             do {
                 do {
-                    System.out.print("Do you want another card? (y/n): ");
+                    System.out.print("Hit? (y/n): ");
                     anotherCard = input.next().charAt(0);
 
                     if (!(anotherCard == 'y' || anotherCard == 'n')) {
@@ -45,6 +47,26 @@ public class Blackjack {
                     System.out.println("Blackjack!");
                 }
             } while ((total < 21) && (anotherCard != 'n'));
+
+            if (total <= 21) {
+                System.out.println("Dealer has a " + dealer + "...");
+                do {
+                    System.out.print("(c to continue) ");
+                    input.nextLine();
+                    card = random.nextInt(10) + 1;
+                    dealer += card;
+                    System.out.println("Dealer gets a " + card);
+                    System.out.println("Total: " + dealer);
+                } while (dealer < 17);
+
+                if (dealer > total && dealer < 21) {
+                    System.out.println("Dealer Wins!");
+                } else if (dealer < total || dealer > 21) {
+                    System.out.println("You Win!");
+                } else {
+                    System.out.println("Push!");
+                }
+            }
 
             do {
                 System.out.print("Do you want to play again? (y/n): ");
