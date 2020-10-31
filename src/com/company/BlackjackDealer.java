@@ -1,6 +1,9 @@
 package com.company;
 
-// Trang Hoang
+/*
+ Trang Hoang
+ CS111B: Assignment 1B Bonus
+ */
 
 import java.util.Random;
 import java.util.Scanner;
@@ -88,3 +91,77 @@ public class BlackjackDealer {
         } while (playAgain == 'y');
     }
 }
+
+
+/*
+The dealer starts with a 4
+Your first cards: 5, 3
+Total: 8
+Hit? (y/n): y
+Card: 4
+Total: 12
+Hit? (y/n): y
+Card: 1
+Total: 13
+Hit? (y/n): y
+Card: 7
+Total: 20
+Hit? (y/n): n
+Dealer has a 4...
+(c to continue) c
+Dealer gets a 9
+Total: 13
+(c to continue) c
+Dealer gets a 5
+Total: 18
+You Win!
+Do you want to play again? (y/n): y
+The dealer starts with a 5
+Your first cards: 8, 9
+Total: 17
+Hit? (y/n): n
+Dealer has a 5...
+(c to continue) c
+Dealer gets a 9
+Total: 14
+(c to continue) c
+Dealer gets a 9
+Total: 23
+You Win!
+Do you want to play again? (y/n): y
+The dealer starts with a 4
+Your first cards: 6, 4
+Total: 10
+Hit? (y/n): y
+Card: 2
+Total: 12
+Hit? (y/n): y
+Card: 10
+Total: 22
+Bust!
+Do you want to play again? (y/n): y
+The dealer starts with a 8
+Your first cards: 3, 7
+Total: 10
+Hit? (y/n): y
+Card: 5
+Total: 15
+Hit? (y/n): y
+Card: 6
+Total: 21
+Blackjack!
+Dealer has a 8...
+(c to continue) c
+Dealer gets a 4
+Total: 12
+(c to continue) c
+Dealer gets a 2
+Total: 14
+(c to continue) c
+Dealer gets a 5
+Total: 19
+You Win!
+Do you want to play again? (y/n): n
+
+Process finished with exit code 0
+ */

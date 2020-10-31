@@ -1,6 +1,9 @@
 package com.company;
 
-// Trang Hoang
+/*
+ Trang Hoang
+ CS111B: Assignment 1B
+ */
 
 import java.util.Scanner;
 import java.util.Random;
@@ -63,3 +66,42 @@ public class Blackjack {
         } while (playAgain == 'y');
     }
 }
+
+
+/*
+First cards: 3, 2
+Total: 5
+Do you want another card? (y/n): y
+Card: 2
+Total: 7
+Do you want another card? (y/n): y
+Card: 6
+Total: 13
+Do you want another card? (y/n): y
+Card: 9
+Total: 22
+Bust!
+Do you want to play again? (y/n): y
+First cards: 8, 10
+Total: 18
+Do you want another card? (y/n): n
+Do you want to play again? (y/n): y
+First cards: 7, 9
+Total: 16
+Do you want another card? (y/n): y
+Card: 7
+Total: 23
+Bust!
+Do you want to play again? (y/n): y
+First cards: 9, 4
+Total: 13
+Do you want another card? (y/n): y
+Card: 7
+Total: 20
+Do you want another card? (y/n): c
+Error: invalid input.
+Do you want another card? (y/n): n
+Do you want to play again? (y/n): n
+
+Process finished with exit code 0
+ */
